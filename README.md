@@ -1,14 +1,11 @@
-# HighlightNet: Highlighting Low-Light Potential Features for Real-Time UAV Tracking
+# Exploiting Local-Global Image Illuminator for Nighttime UAV Tracking
 
-This project inclueds code and demo videos of HighlightNet.
+This project inclueds code and demo videos of LGII.
 
 # Abstract 
-Low-light environments have posed a formidable challenge for robust UAV tracking even with state-of-the-art trackers since the potential image features are hard to extract under adverse light conditions. Besides, due to the low visibility, accurate online selection of the object also becomes extremely difficult for human monitors to initialize UAV tracking in ground control stations (GCSs). To address these problems, this work proposed a novel enhancer, i.e., HighlightNet, to light up potential objects for both human operators and UAV trackers. By employing Transformer, HighlightNet can adjust enhancement parameters according to global features and is thus adaptive for illumination variation. Pixel-level range mask is introduced to make HighlightNet more focused on the enhancement of the tracking object and regions without light sources. Furthermore, a soft truncation mechanism is built to prevent background noise from being mistaken for crucial features. Experiments on image enhancement benchmarks demonstrate HighlightNet has advantages in facilitating human perception. Evaluations on the public UAVDark135 benchmark show that HightlightNet is more suitable for UAV tracking tasks than other top-ranked low-light enhancers. In addition, with real-world tests on a typical UAV platform, HighlightNet verifies its practicability and efficiency in nighttime aerial tracking-related applications.
+Object trackers have been deployed on unmanned aerial vehicles (UAVs) to expand enormous UAV-based autonomous applications. However, inevitable nighttime environments
+slow down the promising expansion. In nighttime UAV applications, head-scratching low illumination not only impede human operators to initialize target objects but also hinder state-of-the-art trackers to extract valuable features. To dispel the darkness for both operators and trackers, this work proposes a novel local-global image illuminator, i.e., LGII. Specifically, a nested pyramid network is constructed to realize pixel-level feature enhancement. The dual-illumination decoder with multi-head attention is employed to facilitate global operator perception. Moreover, driven by a set of well-designed loss functions, LGII is trained with an unpaired nighttime UAV tracking dataset to cope with specific nighttime UAV challenges, e.g., fast motion, illumination variation, and occlusion. To verify the advantage of LGII in assisting both operators and trackers, image enhancement benchmarks and the public UAVDark135 benchmark are applied together. Evaluations of these benchmarks demonstrate that LGII facilitates operator perception and tracking performance obviously. In real-world tests, LGII assists the SOTA tracker to achieve real-time and robust nighttime tracking.
 
-![image](https://github.com/haolindong/images_store/blob/187ca383ba64b14fd3d5fd4ebd5e6a1af0128fdc/pipeline.png)
-# Demo video
-
-[![HighlightNet](https://res.cloudinary.com/marcomontalbano/image/upload/v1647233217/video_to_markdown/images/youtube--KaS-kPvIy2k-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/KaS-kPvIy2k "HighlightNet")
 
 # Contact 
 Haolin Dong
